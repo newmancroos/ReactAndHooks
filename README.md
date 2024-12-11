@@ -5,3 +5,5 @@ Vite (French word for "quick", pronounced /vit/, like "veet") is a build tool th
 
 * A dev server that provides rich feature enhancements over native ES modules, for example extremely fast Hot Module Replacement (HMR).
 * A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
+
+We need to run the Dev server : <b>npm run dev </b> will the run the server in a spcific port.
