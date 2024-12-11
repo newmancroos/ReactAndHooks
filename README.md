@@ -7,3 +7,13 @@ Vite (French word for "quick", pronounced /vit/, like "veet") is a build tool th
 * A build command that bundles your code with Rollup, pre-configured to output highly optimized static assets for production.
 
 We need to run the Dev server : <b>npm run dev </b> will the run the server in a spcific port.
+
+## What is eslint?
+ESLint is a static code analysis tool that helps development teams identify and fix issues in JavaScript and JSX code.
+
+<b>What it does?</b> ESLint scans code for problematic patterns and reports on them. It can help ensure that code adheres to best practices and coding standards, and avoids common errors. 
+
+<b>How it works?</b> ESLint supports current ECMAScript standards, as well as experimental syntax from future standards. It's fully pluggable, so you can: 
+ * Add custom rules and formatters 
+ * Extend functionality with community plugins, configurations, and parsers 
+<b>Benefits:</b> Using ESLint can make code easier to understand, debug, refactor, and test. It can also help prevent bugs and vulnerabilities that could impact functionality and user experience
