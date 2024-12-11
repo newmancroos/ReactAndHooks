@@ -35,7 +35,7 @@ Ex.
     const {firstName, middleName, lastName} = props;
     return(
       &lt;div&gt;
-      <p>My Name is {firstName} {middleName} {lastName} </p>
+      &lt;p&gt;My Name is {firstName} {middleName} {lastName} &lt;/p&gt;
       &lt;/div&gt;
     )
   }
