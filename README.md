@@ -34,9 +34,9 @@ Ex.
   {
     const {firstName, middleName, lastName} = props;
     return(
-      <div>
+      &lt;div&gt;
       <p>My Name is {firstName} {middleName} {lastName} </p>
-      </div>
+      &lt;/div&gt;
     )
   }
 </pre>
@@ -47,9 +47,9 @@ ex.
   const MyBio = ({firstName, middleName, lastName}) =>
   {
     return(
-      <div>
-      <p>My Name is {firstName} {middleName} {lastName} </p>
-      </div>
+      &lt;div&gt;
+      &lt;p&gt;My Name is {firstName} {middleName} {lastName} &lt;/p&gt;
+      &lt;/div&gt;
     )
   }
 </pre>
