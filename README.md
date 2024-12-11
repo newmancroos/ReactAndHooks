@@ -24,3 +24,8 @@ ESLint is a static code analysis tool that helps development teams identify and 
 
 It is a transpiler that transpiles code from JXS to java script. JSX is html embed java script.
 JSX is generally transpiled into nested JavaScript function calls. It's a core concept of React, a popular JavaScript library for building user interfaces
+
+## What is Destruction in React?
+When we deal with Object, we can destruct properties from the object to variables.
+Ex.
+const {firstName, middleName, lastName} = props;
