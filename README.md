@@ -46,7 +46,6 @@ ex.
 <pre>
   const MyBio = ({firstName, middleName, lastName}) =>
   {
-
     return(
       <>
       <p>My Name is {firstName} {middleName} {lastName} </p>
