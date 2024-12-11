@@ -17,3 +17,6 @@ ESLint is a static code analysis tool that helps development teams identify and 
  * Add custom rules and formatters 
  * Extend functionality with community plugins, configurations, and parsers <br/>
 <b>Benefits:</b> Using ESLint can make code easier to understand, debug, refactor, and test. It can also help prevent bugs and vulnerabilities that could impact functionality and user experience
+
+<b>Command :</b> <i>npm run lint</i>
+
