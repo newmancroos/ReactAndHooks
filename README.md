@@ -28,4 +28,29 @@ JSX is generally transpiled into nested JavaScript function calls. It's a core c
 ## What is Destruction in React?
 When we deal with Object, we can destruct properties from the object to variables.
 Ex.
-const {firstName, middleName, lastName} = props;
+
+<pre>
+  const MyBio = (props) =>
+  {
+    const {firstName, middleName, lastName} = props;
+    return(
+      <>
+      <p>My Name is {firstName} {middleName} {lastName} </p>
+      </>
+    )
+  }
+</pre>
+
+this example we can even use the destruction in the constrcutor itself
+ex.
+<pre>
+  const MyBio = ({firstName, middleName, lastName}) =>
+  {
+
+    return(
+      <>
+      <p>My Name is {firstName} {middleName} {lastName} </p>
+      </>
+    )
+  }
+</pre>
