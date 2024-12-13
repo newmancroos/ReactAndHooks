@@ -53,3 +53,26 @@ ex.
     )
   }
 </pre>
+
+## Hooks
+
+1. useState : Allows you to manage state of functional components
+2. udseEffect :
+  *  Enable you to perform side effects in components such as fetching data or subscribing to event
+  *  Runs after every render of the component
+3.  useRef
+   * Use to access or store reference to a DOM element or preserve a value between renders
+4. useContext
+   * Allow you to access shared data (context) in your components without passing it through multiple level of props
+   * Behaves like global variables for components to use.
+5. useReducer
+   * Provide an alternative option to useState for managing more complex state logic
+6. useCallback
+  * Helps optimize your app's performance by memorizing (remembering) funtion
+  * Returns a version of the function that won't change unless its dependents change
+  * Useful when you want to prevent unnecessary re-renders of components that rely on functions as props
+7. useMemo
+  * Similar to useCallback but focuses on memorizing the result of a computation rather than a function
+  * Allow you to store the result of the costly operation and only recalculate when dependencies change
+  * Help avoid unnecessary recalculation and improves performance
+    
