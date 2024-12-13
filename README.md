@@ -56,23 +56,30 @@ ex.
 
 ## Hooks
 
-1. useState : Allows you to manage state of functional components
-2. udseEffect :
+1. <b>useState</b> : Allows you to manage state of functional components
+2. <b>udseEffect </b> :
   *  Enable you to perform side effects in components such as fetching data or subscribing to event
   *  Runs after every render of the component
-3.  useRef
+3.  <b>useRef</b> :
    * Use to access or store reference to a DOM element or preserve a value between renders
-4. useContext
+4. <b>useContext </b> :
    * Allow you to access shared data (context) in your components without passing it through multiple level of props
    * Behaves like global variables for components to use.
-5. useReducer
+5. <b>useReducer</b> :
    * Provide an alternative option to useState for managing more complex state logic
-6. useCallback
+6. <b>useCallback</b> :
   * Helps optimize your app's performance by memorizing (remembering) funtion
   * Returns a version of the function that won't change unless its dependents change
   * Useful when you want to prevent unnecessary re-renders of components that rely on functions as props
-7. useMemo
+7. <b>useMemo</b> :
   * Similar to useCallback but focuses on memorizing the result of a computation rather than a function
   * Allow you to store the result of the costly operation and only recalculate when dependencies change
   * Help avoid unnecessary recalculation and improves performance
     
+## Rules for Hooks
+* Hooks can only be called inside React function components
+* Hooks can only be called at the top level of a components
+* Hooks can't be called inside conditions, loops or other nested functions
+* A component can have multiple hooks and they are executed in the order in which they defined.
+* Hooks can be called from custom hooks
+* All hooks must start with <i>'use'</i> including build in hooks and custom hooks
