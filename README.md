@@ -83,3 +83,14 @@ ex.
 * A component can have multiple hooks and they are executed in the order in which they defined.
 * Hooks can be called from custom hooks
 * All hooks must start with <i>'use'</i> including build in hooks and custom hooks
+
+## Batching
+
+* Performance improvement added to React 18
+* Executed automatically by default
+* State updater function are executed after other codes are all executed
+![image](https://github.com/user-attachments/assets/cfe61783-b856-4295-919b-fceb92a84cc6)
+
+* SetState also executed after all the logic are executed in a handle function.
+* 
+
