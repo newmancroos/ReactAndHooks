@@ -92,5 +92,7 @@ ex.
 ![image](https://github.com/user-attachments/assets/cfe61783-b856-4295-919b-fceb92a84cc6)
 
 * SetState also executed after all the logic are executed in a handle function.
-* 
+
+- Benifits of Batching is avoiding unnecessary rerender for each state updater function.
+ 
 
