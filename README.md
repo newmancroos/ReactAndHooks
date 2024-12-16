@@ -192,3 +192,15 @@ useEffect(() =>{
     }
   }
 </pre>
+
+
+### useRef
+- useRef allow user to a reference values that are not required to rerrender.
+- useRef is updating the value of the current object but will not trigger rerender.
+- ex.
+
+  ![image](https://github.com/user-attachments/assets/e4971b30-9b22-4894-b47c-4c2410f24c27)
+
+  here, Clicking Count rerender the page but it is not affecting the useRef count also clicking useRef button incresing the useRef count but not rerender.
+  so, useRef hooks are used to hold the values between rerenders.
+
