@@ -113,3 +113,10 @@ ex.
   SetCount((prvCount) => prvCount + 1);
   SetCount((prvCount) => prvCount + 1);
 </pre>
+
+## Sharing State between more components
+
+To share a state between more components we need to use <b>State Lifting </b>. That means we need to declare that State and Handle event to the top level components.
+ex.
+![image](https://github.com/user-attachments/assets/2e7edce9-256d-458b-9bdf-0a2a627a63b8)
+
