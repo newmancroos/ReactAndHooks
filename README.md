@@ -137,3 +137,46 @@ Ex.
     const[expensiveCal, setExpensiveCal] = useState(() => expensiveFuntion());
   }
 </pre>
+
+
+### useEffect
+
+* Used to perform side effect
+    - API Calls
+    - Networking
+    - Logging
+    - Subscriptions
+ 
+  useEffect has three aspects
+  1. Declaration
+  2. Dependencies
+  3. Clean ups
+
+ ## Declaration
+
+ useEffect(() =>{
+   // Declaration of effect
+ }
+
+## Dependencies
+
+- No Dependency
+<pre>
+useEffect(() =>{
+
+}
+</pre>
+
+- Has Dependecy and run once (in the render)
+<pre>
+useEffect(() =>{
+
+}[]
+
+- Has dependencies and runs every state change of the spcify state elements
+
+<pre>
+useEffect(() =>{
+
+}[a,b,...]
+</pre>
