@@ -120,3 +120,20 @@ To share a state between more components we need to use <b>State Lifting </b>. T
 ex.
 ![image](https://github.com/user-attachments/assets/2e7edce9-256d-458b-9bdf-0a2a627a63b8)
 
+
+## Expensive initial state:
+Sometime we may have a expensive operation when we set the initial value to a state variable, we may use a function to calculate this initial state value and assign it to the state variable but every time page rerender these calculate function will fire and this may reduce the performance. We we need to make the initial state function runs only in the initial render.<br/>
+To achive that we can call the expensive function as anonyamouse function in the initial state.
+
+Ex.
+<pre>
+  const expensiveFuntion = () =>{
+  console.log('super expensive function');
+  return 5;
+  }
+
+  const HookUseState = () =>{
+
+    const[expensiveCal, setExpensiveCal] = useState(() => expensiveFuntion());
+  }
+</pre>
