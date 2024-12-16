@@ -96,3 +96,20 @@ ex.
 - Benifits of Batching is avoiding unnecessary rerender for each state updater function.
  
 
+### State Update
+
+When we update a state variable using let say SetCount(count + 1), It will increment the count value by 1 BUT if we use
+<pre>
+  SetCount(count + 1)
+  SetCount(count + 1)
+  SetCount(count + 1)
+</pre>
+
+It will increment the count value by 1 not by 3. It is because Batching, that means State updater function are executed after other codes are all executed.
+Still we have way to update the same state variuable more than one time using Updater function inside setCount.
+ex.
+<pre>
+  SetCount((prvCount) => prvCount + 1);
+  SetCount((prvCount) => prvCount + 1);
+  SetCount((prvCount) => prvCount + 1);
+</pre>
