@@ -180,3 +180,15 @@ useEffect(() =>{
 
 }[a,b,...]
 </pre>
+
+## Clean ups
+<pre>
+  useEffect(() =>{
+    // Declaration goes here
+
+    //Below is the Clean ups
+    return () =>{
+    console.log('Cleaning effect on exit');
+    }
+  }
+</pre>
