@@ -171,7 +171,7 @@ useEffect(() =>{
 <pre>
 useEffect(() =>{
 
-}[]
+},[])
 
 - Has dependencies and runs every state change of the spcify state elements
 
