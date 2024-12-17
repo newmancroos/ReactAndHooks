@@ -238,7 +238,7 @@ Ex.
         </pre>
 
     3. <b>Use</b> - Use the context in the component that needs the data
-      <pre>
+      
           const {val1, vcal2, val3} = useContext(TextContext)
-      </pre>
+      
       
