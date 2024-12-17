@@ -211,5 +211,12 @@ useEffect(() =>{
   ![image](https://github.com/user-attachments/assets/9fe97912-e298-44bd-91f6-642187858273)
 
   
+## forwardRef
+
+We can refer ref variable from out component
+
+Ex. 
+![image](https://github.com/user-attachments/assets/513491e7-448a-4ca5-8044-29ddd4704df2)
+
 
   
