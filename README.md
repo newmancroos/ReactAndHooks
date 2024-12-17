@@ -219,4 +219,8 @@ Ex.
 ![image](https://github.com/user-attachments/assets/513491e7-448a-4ca5-8044-29ddd4704df2)
 
 
-  
+### useContext
+
+   * Allow you to access shared data (context) in your components without passing it through multiple level of props
+   * Behaves like global variables for components to use.
+   *
