@@ -232,10 +232,10 @@ Ex.
    2. <b>Provide</b> - Provide the context to the component that needs the context
      ex.
         <pre>
-        <TextContext.Provider value={someValue}>
+        &lt;TextContext.Provider value={someValue}&gt;
            {children}
-        </TextContext.Provider>
-        </pre>
+        &lt;/TextContext.Provider&gt;
+        &lt;/pre&gt;
 
     3. <b>Use</b> - Use the context in the component that needs the data
       <pre>
