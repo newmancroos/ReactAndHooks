@@ -235,7 +235,7 @@ Ex.
         &lt;TextContext.Provider value={someValue}&gt;
            {children}
         &lt;/TextContext.Provider&gt;
-        &lt;/pre&gt;
+        </pre>
 
     3. <b>Use</b> - Use the context in the component that needs the data
       <pre>
