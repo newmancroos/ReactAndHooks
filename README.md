@@ -205,3 +205,11 @@ useEffect(() =>{
   here, Clicking Count rerender the page but it is not affecting the useRef count <br/>also clicking useRef button incresing the useRef count but not rerender.
   so, useRef hooks are used to hold the values between rerenders.
 
+
+* useRef also use to refer a dom element so that we can access the element without using state variable.
+
+  ![image](https://github.com/user-attachments/assets/9fe97912-e298-44bd-91f6-642187858273)
+
+  
+
+  
