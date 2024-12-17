@@ -223,4 +223,22 @@ Ex.
 
    * Allow you to access shared data (context) in your components without passing it through multiple level of props
    * Behaves like global variables for components to use.
-   *
+
+   To use useContext we need to use C.C.U model
+
+   1. <b>Create </b> - Create a context
+      ex. const TextContext = createContext();
+
+   2. <b>Provide</b> - Provide the context to the component that needs the context
+     ex.
+        <pre>
+        <TextContext.Provider value={someValue}>
+           {children}
+        </TextContext.Provider>
+        </pre>
+
+    3. <b>Use</b> - Use the context in the component that needs the data
+      <pre>
+          const {val1, vcal2, val3} = useContext(TextContext)
+      </pre>
+      
