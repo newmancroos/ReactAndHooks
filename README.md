@@ -263,3 +263,6 @@ Ex.
   - Stateful Value - The current value of the stae
  
     
+![image](https://github.com/user-attachments/assets/86338e5b-4fea-485e-80ad-b527bc5dfbdd)
+
+
