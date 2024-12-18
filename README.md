@@ -266,3 +266,20 @@ Ex.
 ![image](https://github.com/user-attachments/assets/86338e5b-4fea-485e-80ad-b527bc5dfbdd)
 
 
+### useCallback
+
+ * Helps optimize your app's performance by memorizing (remembering) funtion
+ * Returns a version of the function that won't change unless its dependents change
+ * Useful when you want to prevent unnecessary re-renders of components that rely on functions as props
+
+<p>
+  const memoFunc = useCallback(func, dep)
+</p>
+
+- First parameter is the function to memorized
+- Second paramter is Dependency
+
+  <pre.
+    useCallback(()=>{
+    //Memorized function
+  }, [a,b,c,d])   //Dependency
