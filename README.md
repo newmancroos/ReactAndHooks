@@ -283,3 +283,9 @@ Ex.
     useCallback(()=>{
     //Memorized function
   }, [a,b,c,d])   //Dependency
+
+
+  ![image](https://github.com/user-attachments/assets/2fa3c6c6-ae71-49c9-8218-4a5552a885fb)
+
+  
+
