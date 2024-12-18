@@ -279,11 +279,11 @@ Ex.
 - First parameter is the function to memorized
 - Second paramter is Dependency
 
-  <pre.
+  <pre>
     useCallback(()=>{
     //Memorized function
   }, [a,b,c,d])   //Dependency
-
+</pre>
 
   ![image](https://github.com/user-attachments/assets/2fa3c6c6-ae71-49c9-8218-4a5552a885fb)
 
