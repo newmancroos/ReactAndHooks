@@ -242,3 +242,24 @@ Ex.
           const {val1, vcal2, val3} = useContext(TextContext)
       
       
+### useReducer
+
+- Used to manage complex state logic in a controlled manner
+- Serves as an alternative to useState
+- Template
+     * Takes two arguments
+            - Reducer function  and initial state value
+     * Returns an array with two items
+            - Sateful value and a Dispatch function
+  <pre>
+    const [state, dispatch] = useReducer(redFunc, initState)
+  </pre> 
+
+  ## Parameters
+
+  - Reducer Function - Responsible for spficying how the state should be updated based on dispatched action
+  - Initial State - Starting point of the state
+  - Dispatch Function - Used to send action to the reducer
+  - Stateful Value - The current value of the stae
+ 
+    
