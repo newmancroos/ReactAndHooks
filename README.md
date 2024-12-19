@@ -288,4 +288,7 @@ Ex.
   ![image](https://github.com/user-attachments/assets/2fa3c6c6-ae71-49c9-8218-4a5552a885fb)
 
   
+![image](https://github.com/user-attachments/assets/5125e82f-ab6a-464b-b505-1195d6caee47)
+
+Here when render two functiosn added to setFunc but when you click increment button only increment function added to setFunc list not decrement function because decrement added to callback and it is not firing.
 
