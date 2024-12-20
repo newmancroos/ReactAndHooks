@@ -310,3 +310,10 @@ Here when render two functiosn added to setFunc but when you click increment but
        const Component = memo(funtion Component(props){
          //function declaration
       });
+
+
+ex.
+
+![image](https://github.com/user-attachments/assets/33521f6d-5bf5-49ac-9da7-8e08cbfd23a8)
+
+Here when we click Incfement, Decrement will not rerender because Decrement is wrapped insoide memo, memo memorized the entire component and rerender when its dependency changes.
