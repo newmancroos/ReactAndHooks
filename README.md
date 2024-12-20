@@ -317,3 +317,14 @@ ex.
 ![image](https://github.com/user-attachments/assets/33521f6d-5bf5-49ac-9da7-8e08cbfd23a8)
 
 Here when we click Incfement, Decrement will not rerender because Decrement is wrapped insoide memo, memo memorized the entire component and rerender when its dependency changes.
+
+
+### useMemo 
+Similar to useCallback but focuses on memorizing the result of a computation rather than a function
+Allow you to store the result of the costly operation and only recalculate when dependencies change
+Help avoid unnecessary recalculation and improves performance
+
+Syntax :
+<pre>
+const memVal = useMemo(&lt;fn&gt;,&lt;dep&gt;)
+</pre>
