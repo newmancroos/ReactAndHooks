@@ -292,3 +292,21 @@ Ex.
 
 Here when render two functiosn added to setFunc but when you click increment button only increment function added to setFunc list not decrement function because decrement added to callback and it is not firing.
 
+## memo
+
+- Skips re-rendering a component when its props are unchanged
+- Similar to useCallback and useMemo, they are all used for memoizing/caching/remembering
+    a. mem is used to momozie an entire component
+    b. useCallback used to memoize a funtion
+
+  <b>Props-blems:</b>
+  * If props passed to memo are function, memo will not be able to memoize component, redenering it useless
+  * Solutiom is to wrap props passed to memo with useCallback
+ 
+    <b>memp - Syntax :</b>
+    memo(Component, arePropsEqual?)
+
+    ex.
+       const Component = memo(funtion Component(props){
+         //function declaration
+      });
