@@ -328,3 +328,9 @@ Syntax :
 <pre>
 const memVal = useMemo(&lt;fn&gt;,&lt;dep&gt;)
 </pre>
+
+<b>Use cases</b>
+- Similar to the use cases of useCallback such as:
+   * aVOIDING UNNECESSARY rE-rENDERS
+   * Optimizing expensive calculations
+   * When dealing with a large list. Used for filtering, transforming or looping
