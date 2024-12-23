@@ -343,3 +343,14 @@ In the above sample even though I click Increment button, expensiveIteration fun
 
 Wrapping ExpensiveIteration function within useMemo,  now expensiveIteration function will turned into value and it will be call when 'nth' state variable changes.
 
+### CustomHook
+
+- It is JS function that enables you to share statefull logic, side effect, functionalities across multiple components woithout duplicating code.
+- Custome hooks can be created by developers with its own custome logic
+- Typically values, state variables, or functions that can be used by component
+- Syntax
+    - Define a JS function staring with 'use' prefix. ex. useCustomHook
+      const useCustomHook = (arg?) =>{
+        //function declaraation
+      }
+      <b>useage :</b> const hk = useCustomerHook(args?)
