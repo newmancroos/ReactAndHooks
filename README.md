@@ -339,3 +339,7 @@ const memVal = useMemo(&lt;fn&gt;,&lt;dep&gt;)
 
 In the above sample even though I click Increment button, expensiveIteration function will be called this is an expensive calculation will delay the regular process.
 
+![image](https://github.com/user-attachments/assets/397f6eff-7b65-4e11-87e5-c024896b6307)
+
+Wrapping ExpensiveIteration function within useMemo,  now expensiveIteration function will turned into value and it will be call when 'nth' state variable changes.
+
