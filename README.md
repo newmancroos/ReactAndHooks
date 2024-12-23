@@ -334,3 +334,8 @@ const memVal = useMemo(&lt;fn&gt;,&lt;dep&gt;)
    * aVOIDING UNNECESSARY rE-rENDERS
    * Optimizing expensive calculations
    * When dealing with a large list. Used for filtering, transforming or looping
+
+![image](https://github.com/user-attachments/assets/ff2501c4-2f9c-47d7-83bf-abff09460d32)
+
+In the above sample even though I click Increment button, expensiveIteration function will be called this is an expensive calculation will delay the regular process.
+
