@@ -354,3 +354,10 @@ Wrapping ExpensiveIteration function within useMemo,  now expensiveIteration fun
         //function declaraation
       }
       <b>useage :</b> const hk = useCustomerHook(args?)
+
+
+![image](https://github.com/user-attachments/assets/109e06f6-5272-4a7c-8b55-80ad9ed3b5d9)
+
+![image](https://github.com/user-attachments/assets/2d8ce04e-d3d9-4b1b-b892-355924116be6)
+
+
