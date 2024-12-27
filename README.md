@@ -83,3 +83,274 @@ ex.
 * A component can have multiple hooks and they are executed in the order in which they defined.
 * Hooks can be called from custom hooks
 * All hooks must start with <i>'use'</i> including build in hooks and custom hooks
+
+## Batching
+
+* Performance improvement added to React 18
+* Executed automatically by default
+* State updater function are executed after other codes are all executed
+![image](https://github.com/user-attachments/assets/cfe61783-b856-4295-919b-fceb92a84cc6)
+
+* SetState also executed after all the logic are executed in a handle function.
+
+- Benifits of Batching is avoiding unnecessary rerender for each state updater function.
+ 
+
+### State Update
+
+When we update a state variable using let say SetCount(count + 1), It will increment the count value by 1 BUT if we use
+<pre>
+  SetCount(count + 1)
+  SetCount(count + 1)
+  SetCount(count + 1)
+</pre>
+
+It will increment the count value by 1 not by 3. It is because Batching, that means State updater function are executed after other codes are all executed.
+Still we have way to update the same state variuable more than one time using Updater function inside setCount.
+ex.
+<pre>
+  SetCount((prvCount) => prvCount + 1);
+  SetCount((prvCount) => prvCount + 1);
+  SetCount((prvCount) => prvCount + 1);
+</pre>
+
+## Sharing State between more components
+
+To share a state between more components we need to use <b>State Lifting </b>. That means we need to declare that State and Handle event to the top level components.
+ex.
+![image](https://github.com/user-attachments/assets/2e7edce9-256d-458b-9bdf-0a2a627a63b8)
+
+
+## Expensive initial state:
+Sometime we may have a expensive operation when we set the initial value to a state variable, we may use a function to calculate this initial state value and assign it to the state variable but every time page rerender these calculate function will fire and this may reduce the performance. We we need to make the initial state function runs only in the initial render.<br/>
+To achive that we can call the expensive function as anonyamouse function in the initial state.
+
+Ex.
+<pre>
+  const expensiveFuntion = () =>{
+  console.log('super expensive function');
+  return 5;
+  }
+
+  const HookUseState = () =>{
+
+    const[expensiveCal, setExpensiveCal] = useState(() => expensiveFuntion());
+  }
+</pre>
+
+
+### useEffect
+
+* Used to perform side effect
+    - API Calls
+    - Networking
+    - Logging
+    - Subscriptions
+ 
+  useEffect has three aspects
+  1. Declaration
+  2. Dependencies
+  3. Clean ups
+
+ ## Declaration
+
+ useEffect(() =>{
+   // Declaration of effect
+ }
+
+## Dependencies
+
+- No Dependency
+<pre>
+useEffect(() =>{
+
+}
+</pre>
+
+- Has Dependecy and run once (in the render)
+<pre>
+useEffect(() =>{
+
+},[])
+
+- Has dependencies and runs every state change of the spcify state elements
+
+<pre>
+useEffect(() =>{
+
+}[a,b,...]
+</pre>
+
+## Clean ups
+<pre>
+  useEffect(() =>{
+    // Declaration goes here
+
+    //Below is the Clean ups
+    return () =>{
+    console.log('Cleaning effect on exit');
+    }
+  }
+</pre>
+
+
+### useRef
+- useRef allow user to a reference values that are not required to rerrender.
+- useRef is updating the value of the current object but will not trigger rerender.
+- ex.
+
+  ![image](https://github.com/user-attachments/assets/e4971b30-9b22-4894-b47c-4c2410f24c27)
+
+
+  here, Clicking Count rerender the page but it is not affecting the useRef count <br/>also clicking useRef button incresing the useRef count but not rerender.
+  so, useRef hooks are used to hold the values between rerenders.
+
+
+* useRef also use to refer a dom element so that we can access the element without using state variable.
+
+  ![image](https://github.com/user-attachments/assets/9fe97912-e298-44bd-91f6-642187858273)
+
+  
+## forwardRef
+
+We can refer ref variable from out component
+
+Ex. 
+![image](https://github.com/user-attachments/assets/513491e7-448a-4ca5-8044-29ddd4704df2)
+
+
+### useContext
+
+   * Allow you to access shared data (context) in your components without passing it through multiple level of props
+   * Behaves like global variables for components to use.
+
+   To use useContext we need to use C.C.U model
+
+   1. <b>Create </b> - Create a context
+      ex. const TextContext = createContext();
+
+   2. <b>Provide</b> - Provide the context to the component that needs the context
+     ex.
+        <pre>
+        &lt;TextContext.Provider value={someValue}&gt;
+           {children}
+        &lt;/TextContext.Provider&gt;
+        </pre>
+
+    3. <b>Use</b> - Use the context in the component that needs the data
+      
+          const {val1, vcal2, val3} = useContext(TextContext)
+      
+      
+### useReducer
+
+- Used to manage complex state logic in a controlled manner
+- Serves as an alternative to useState
+- Template
+     * Takes two arguments
+            - Reducer function  and initial state value
+     * Returns an array with two items
+            - Sateful value and a Dispatch function
+  <pre>
+    const [state, dispatch] = useReducer(redFunc, initState)
+  </pre> 
+
+  ## Parameters
+
+  - Reducer Function - Responsible for spficying how the state should be updated based on dispatched action
+  - Initial State - Starting point of the state
+  - Dispatch Function - Used to send action to the reducer
+  - Stateful Value - The current value of the stae
+ 
+    
+![image](https://github.com/user-attachments/assets/86338e5b-4fea-485e-80ad-b527bc5dfbdd)
+
+
+### useCallback
+
+ * Helps optimize your app's performance by memorizing (remembering) funtion
+ * Returns a version of the function that won't change unless its dependents change
+ * Useful when you want to prevent unnecessary re-renders of components that rely on functions as props
+
+<p>
+  const memoFunc = useCallback(func, dep)
+</p>
+
+- First parameter is the function to memorized
+- Second paramter is Dependency
+
+  <pre>
+    useCallback(()=>{
+    //Memorized function
+  }, [a,b,c,d])   //Dependency
+</pre>
+
+  ![image](https://github.com/user-attachments/assets/2fa3c6c6-ae71-49c9-8218-4a5552a885fb)
+
+  
+![image](https://github.com/user-attachments/assets/5125e82f-ab6a-464b-b505-1195d6caee47)
+
+Here when render two functiosn added to setFunc but when you click increment button only increment function added to setFunc list not decrement function because decrement added to callback and it is not firing.
+
+## memo
+
+- Skips re-rendering a component when its props are unchanged
+- Similar to useCallback and useMemo, they are all used for memoizing/caching/remembering
+    a. mem is used to momozie an entire component
+    b. useCallback used to memoize a funtion
+
+  <b>Props-blems:</b>
+  * If props passed to memo are function, memo will not be able to memoize component, redenering it useless
+  * Solutiom is to wrap props passed to memo with useCallback
+ 
+    <b>memp - Syntax :</b>
+    memo(Component, arePropsEqual?)
+
+    ex.
+       const Component = memo(funtion Component(props){
+         //function declaration
+      });
+
+
+ex.
+
+![image](https://github.com/user-attachments/assets/33521f6d-5bf5-49ac-9da7-8e08cbfd23a8)
+
+Here when we click Incfement, Decrement will not rerender because Decrement is wrapped insoide memo, memo memorized the entire component and rerender when its dependency changes.
+
+
+### useMemo 
+Similar to useCallback but focuses on memorizing the result of a computation rather than a function
+Allow you to store the result of the costly operation and only recalculate when dependencies change
+Help avoid unnecessary recalculation and improves performance
+
+Syntax :
+<pre>
+const memVal = useMemo(&lt;fn&gt;,&lt;dep&gt;)
+</pre>
+
+<b>Use cases</b>
+- Similar to the use cases of useCallback such as:
+   * aVOIDING UNNECESSARY rE-rENDERS
+   * Optimizing expensive calculations
+   * When dealing with a large list. Used for filtering, transforming or looping
+
+![image](https://github.com/user-attachments/assets/ff2501c4-2f9c-47d7-83bf-abff09460d32)
+
+In the above sample even though I click Increment button, expensiveIteration function will be called this is an expensive calculation will delay the regular process.
+
+![image](https://github.com/user-attachments/assets/397f6eff-7b65-4e11-87e5-c024896b6307)
+
+Wrapping ExpensiveIteration function within useMemo,  now expensiveIteration function will turned into value and it will be call when 'nth' state variable changes.
+
+### CustomHook
+
+- It is JS function that enables you to share statefull logic, side effect, functionalities across multiple components woithout duplicating code.
+- Custome hooks can be created by developers with its own custome logic
+- Typically values, state variables, or functions that can be used by component
+- Syntax
+    - Define a JS function staring with 'use' prefix. ex. useCustomHook
+      const useCustomHook = (arg?) =>{
+        //function declaraation
+      }
+      <b>useage :</b> const hk = useCustomerHook(args?)
